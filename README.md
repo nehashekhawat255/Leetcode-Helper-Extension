@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# LeetCode Helper Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LeetCode Helper Extension is a Chrome extension designed to enhance your LeetCode experience. Acting as an AI chatbot, it helps you solve coding problems by leveraging OpenAI's API. The bot understands the full context of the problem, including the question, examples, and the sample code provided by the LeetCode editor.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **AI-Powered Assistance:** The bot provides intelligent solutions and explanations for LeetCode problems.
+- **Context Awareness:** The bot knows the entire context of the problem, including:
+  - Problem description
+  - Examples
+  - Sample code provided by the editor
+- **OpenAI API Integration:** Users can input their OpenAI API key for interaction with the bot.
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before using this extension, ensure you have:
 
-- Configure the top-level `parserOptions` property like this:
+1. A valid OpenAI API key.
+2. Google Chrome installed on your system.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Follow these steps to install the LeetCode Helper Extension:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone this repository to your local machine:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/nehashekhawat255/leetcode-helper-extension.git
+   ```
+
+2. Open Chrome and navigate to `chrome://extensions/`.
+
+3. Enable **Developer mode** by toggling the switch in the top-right corner.
+
+4. Click on the **Load unpacked** button and select the folder where you cloned this repository.
+
+5. The extension should now appear in your list of installed extensions.
+
+## Usage
+
+1. Open LeetCode in your browser.
+2. Click on the LeetCode Helper Extension icon in your Chrome toolbar.
+3. Enter your OpenAI API key in the provided field.
+4. Navigate to any LeetCode problem, and the bot will:
+   - Fetch the problem's context.
+   - Provide suggestions, hints, and solutions.
+
+## API Key Security
+
+Your OpenAI API key is stored locally on your browser and is not transmitted to any third party except OpenAI. Please ensure you handle your API key securely and avoid sharing it with others.
+
+---
+
+Happy coding with LeetCode Helper Extension!
